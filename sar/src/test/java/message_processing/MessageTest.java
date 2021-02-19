@@ -2,6 +2,7 @@ package message_processing;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -41,9 +42,9 @@ class MessageTest {
 	
 	@Test
 	void test_getMsgDate_returnsWithCorrectDateFormat() {
-		DateTimeFormatter dateFormat = DateTimeFormatUtility.FORMATTED_DATE;
+		DateTimeFormatter dateFormat = DateTimeFormatUtility.FORMATTED_DATETIME;
 		assertDoesNotThrow(()-> {
-			dateFormat.parse(testMessage.getMsgDate());
+			LocalDateTime.parse(testMessage.getMsgDate(), dateFormat);
 		});
 	}
 

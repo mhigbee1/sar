@@ -21,6 +21,7 @@ public class ErrorMessagingResponseBodyGenerator implements ResponseBodyUtility{
 	public ErrorMessagingResponseBodyGenerator(UriInfo mUriInfo, InformationIDs emptyRequestInfo, int mStatus) {
 		this.uriInfo = mUriInfo;
 		this.errorDetail = ((EmptyRequestInfo) emptyRequestInfo).getErrorMsg();
+		this.status = mStatus;
 		this.uriPath = "/" + uriInfo.getPath();
 	}
 	

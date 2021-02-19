@@ -682,6 +682,9 @@ class RideInformationCreatorTest {
 		requestBody.add(ResponseBodyUtility.RATE_PER_PASSENGER_KEY, gson.toJsonTree(RATE_PER_PASSENGER));
 		requestBody.add(ResponseBodyUtility.VEHICLE_RULES_KEY, gson.toJsonTree(VEHICLE_RULES));
 		
+		System.out.format("ride-String==> %s", requestBody.toString());
+		System.out.format("isEmtpy Boolean==> %s", rideInformationCreator.create(requestBody.toString()).isEmptyRequest());
+		
 		assertTrue(rideInformationCreator.create(requestBody.toString()).isEmptyRequest());
 	}
 	

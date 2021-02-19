@@ -23,7 +23,7 @@ class DateFormatValidationTest {
 			dateFormatValidation.validate();
 		});
 	}
-	
+
 	@Test
 	void test_validate_passedINVALID_DATE_returnsIllegalArgumentException() {
 		dateFormatValidation = new DateFormatValidation(INVALID_DATE, ERR_MSG_TEXT);
@@ -39,5 +39,5 @@ class DateFormatValidationTest {
 			dateFormatValidation.validate();
 		});
 	}
-
+	
 }

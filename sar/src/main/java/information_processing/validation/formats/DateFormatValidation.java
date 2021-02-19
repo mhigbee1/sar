@@ -1,5 +1,6 @@
 package information_processing.validation.formats;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
@@ -19,7 +20,7 @@ public class DateFormatValidation implements InformationIDsValidation{
 	public void validate() throws IllegalArgumentException{
 		DateTimeFormatter dateFormat = DateTimeFormatUtility.FORMATTED_DATE;
 		try {
-			dateFormat.parse(date);
+			LocalDate.parse(date, dateFormat);
 		}catch (DateTimeParseException pe){
 			pe.printStackTrace();
 			throw new IllegalArgumentException(errorMsg);

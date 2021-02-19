@@ -6,16 +6,17 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 import java.util.TimeZone;
 
 public abstract class DateTimeFormatUtility {
-	public static final String DEFAULT_FORMAT = "dd-MMM-yyyy, HH:mm:ss";
-	public static final String DATE_FORMAT = "dd-MMM-yyyy";
+	public static final String DEFAULT_FORMAT = "dd-MMM-uuuu, HH:mm:ss";
+	public static final String DATE_FORMAT = "dd-MMM-uuuu";
 	public static final String TIME_FORMAT = "HH:mm";
 	
 	
-	public static final DateTimeFormatter FORMATTED_DATETIME = DateTimeFormatter.ofPattern(DEFAULT_FORMAT);
-	public static final DateTimeFormatter FORMATTED_DATE = DateTimeFormatter.ofPattern(DATE_FORMAT);
+	public static final DateTimeFormatter FORMATTED_DATETIME = DateTimeFormatter.ofPattern(DEFAULT_FORMAT).withResolverStyle(ResolverStyle.STRICT);
+	public static final DateTimeFormatter FORMATTED_DATE = DateTimeFormatter.ofPattern(DATE_FORMAT).withResolverStyle(ResolverStyle.STRICT);
 	public static final DateTimeFormatter FORMATTED_TIME = DateTimeFormatter.ofPattern(TIME_FORMAT);
 	
 	

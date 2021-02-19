@@ -91,13 +91,13 @@ class InformationIDsInheritanceTest {
 		}
 		
 		@Test
-		void test_getAid_returnsNull() {
-			assertNull(rateInformation.getAid());
+		void test_getAid_returnsMatchforSENDER_ID() {
+			assertEquals(SENDER_ID, rateInformation.getAid());
 		}
 		
 		@Test
-		void test_getRid_returnsNull() {
-			assertNull(rateInformation.getRid());
+		void test_getRid_returnsMatchforRID() {
+			assertEquals(RID, rateInformation.getRid());
 		}
 		
 		@Test
@@ -131,8 +131,8 @@ class InformationIDsInheritanceTest {
 		}
 		
 		@Test
-		void test_getAid_returnsNull() {
-			assertNull(rideInformation.getAid());
+		void test_getAid_returnsMatchForAID() {
+			assertEquals(AID, rideInformation.getAid());
 		}
 		
 		@Test
@@ -210,7 +210,7 @@ class InformationIDsInheritanceTest {
 	
 		@Test
 		void test_getAid_returnsTRUEforMatchedAid() {
-			assertEquals(AID, emptyRequestInfo.getAid());
+			assertNull(emptyRequestInfo.getAid());
 		}
 		
 		@Test
@@ -220,14 +220,8 @@ class InformationIDsInheritanceTest {
 		
 		@Test
 		void test_isEmptyRequest_returnsFalse() {
-			assertFalse(emptyRequestInfo.isEmptyRequest());
+			assertTrue(emptyRequestInfo.isEmptyRequest());
 		}
 	}
 	
-	
-	
-	
-	
-	
-
-	}
+}
