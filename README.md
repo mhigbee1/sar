@@ -24,6 +24,9 @@ $ sudo apt install unzip
 
 
 Install Apache Tomcat 9:
+
+$ cd ~Downloads
+
 $ wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.zip
 
 
