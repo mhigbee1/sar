@@ -36,6 +36,9 @@ $ sudo mv apache-tomcat-9.0.43 /opt/apache-tomcat
 To build the Ride Share project:
 Navigate to a directory where you want to hold the project.
 
+Download git:
+$ sudo apt install git
+
 Clone the github repository:
 $ git clone https://github.com/mhigbee1/sar.git
 
