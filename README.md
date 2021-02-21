@@ -49,7 +49,7 @@ Create the gradle wrapper:
 $ gradle wrapper
 
 Build the project:
-$ ./gradlew build
+$ gradle build
 
 
 To deploy the Ride Share project:
