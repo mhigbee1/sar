@@ -48,7 +48,7 @@ public class RideShareServices {
 	RideOperationsBoundary rideOperator = new RideOperations();
 	private final int BAD_REQUEST_CODE = Status.BAD_REQUEST.getStatusCode();
 	
-	@Path("tester")
+	@Path("/tester")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String tester() {
