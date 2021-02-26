@@ -12,11 +12,13 @@ Install Java:
 $ sudo apt install openjdk-11-jdk-headless
 
 Install Gradle:
-$ sudo apt -y install vim apt-transport-https dirmngr wget software-properties-common
+$ sudo apt install curl
 
-$ sudo apt-get update
+$ curl -s "https://get.sdkman.io" | bash
 
-$ sudo apt -y install gradle
+Enter the source command given by sdkman at the end of the download message
+
+$ sdk install gradle 5.1.1
 
 
 Install Unzip:
@@ -24,10 +26,10 @@ $ sudo apt install unzip
 
 
 Install Apache Tomcat 9:
+$ cd ~Downloads
+
 $ wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.zip
 
-
-From the Downloads folder:
 $ unzip apache-tomcat-9.0.43.zip
 
 $ sudo mv apache-tomcat-9.0.43 /opt/apache-tomcat
@@ -36,10 +38,15 @@ $ sudo mv apache-tomcat-9.0.43 /opt/apache-tomcat
 To build the Ride Share project:
 Navigate to a directory where you want to hold the project.
 
+Install git:
+$ sudo apt install git
+
 Clone the github repository:
 $ git clone https://github.com/mhigbee1/sar.git
 
 Create the gradle wrapper:
+$ cd sar/sar
+
 $ gradle wrapper
 
 Build the project:
