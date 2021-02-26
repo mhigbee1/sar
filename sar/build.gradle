@@ -13,7 +13,6 @@ plugins {
     id 'war'
 }
 
-project.webAppDirName = 'WebContent'
 
 repositories {
     // Use jcenter for resolving dependencies.
