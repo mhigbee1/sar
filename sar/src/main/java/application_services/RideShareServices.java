@@ -50,9 +50,9 @@ public class RideShareServices {
 	
 	@Path("/tester")
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.TEXT_HTML)
 	public String tester() {
-		return "application is running";
+		return "<html> "+"<title>"+"RideShare"+"</title>"+"<body><h1>"+"Hello Tester"+"</h1></body>"+"</title> ";
 	}
 	
 	
