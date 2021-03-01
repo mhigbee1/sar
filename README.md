@@ -9,7 +9,7 @@ Update the packaging tool:
 $ sudo apt update
 
 Install Java:
-$ sudo apt install openjdk-11-jdk-headless
+$ sudo apt install openjdk-8-jdk
 
 Install Gradle:
 $ sudo apt install curl
@@ -26,7 +26,7 @@ $ sudo apt install unzip
 
 
 Install Apache Tomcat 9:
-$ cd ~Downloads
+$ cd ~/Downloads
 
 $ wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.zip
 
