@@ -352,7 +352,7 @@ public class RideShareServices {
 	@PATCH
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateRideRequest(@PathParam("rid") int rid, @PathParam("jid") int jid, String responseBody, UriInfo uri) {
+	public Response updateRideRequest(@PathParam("rid") int rid, @PathParam("jid") int jid, String responseBody, @Context UriInfo uri) {
 	
 			InformationIDsCreator updateRideRequestInfoCreator = new UpdateRideRequestInfoCreator();
 			InformationIDs updateRideRequestInfo = updateRideRequestInfoCreator.create(responseBody);
