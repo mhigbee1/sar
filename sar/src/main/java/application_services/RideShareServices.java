@@ -348,7 +348,7 @@ public class RideShareServices {
 	
 	
 	
-	@Path("rides/{jid}/join_requests/{jid}")
+	@Path("rides/{rid}/join_requests/{jid}")
 	@PATCH
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
